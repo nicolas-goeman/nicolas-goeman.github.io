@@ -18,10 +18,10 @@ theme = "kodama-theme"
 [extra]
 # Put all your custom variables here
 favicon = "photo.jpg"
+avatar = "photo.jpg"
+email = "nicolas.goeman[at]centralelille.fr"
 author = "Nicolas Goeman"
 description = "Personal academic webpage"
 menu_items = [
-    { name = "Home", url = "/" },
-    { name = "Blog", url = "/blog/" },
-    { name = "About", url = "/about/" }
+  { path = "#contacts", name = "Contact" },
 ]
