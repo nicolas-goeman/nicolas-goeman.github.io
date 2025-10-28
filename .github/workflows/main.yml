@@ -15,10 +15,7 @@ jobs:
           submodules: recursive  # make sure Kodama theme is cloned
 
       - name: Install Zola
-        run: |
-          curl -sSLf https://sh.rustup.rs | sh -s -- -y
-          source $HOME/.cargo/env
-          cargo install zola
+        uses: getzola/zola-action@v2
 
       - name: Build site
         run: zola build
