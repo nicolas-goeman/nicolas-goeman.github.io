@@ -17,3 +17,6 @@ theme = "kodama-theme"
 
 [extra]
 # Put all your custom variables here
+favicon = "photo.jpg"
+author = "Nicolas Goeman"
+description = "Personal academic webpage"
