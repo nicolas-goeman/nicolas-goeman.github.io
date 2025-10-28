@@ -12,7 +12,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Disable Jekyll
         run: touch public/.nojekyll
-      - name: build-and-deploy
-        uses: ./ # wherever your action is in relation to the root of the repo
-        env:
-          TOKEN: ${{secrets.TOKEN}}
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
