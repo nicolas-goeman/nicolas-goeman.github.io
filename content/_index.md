@@ -3,40 +3,35 @@ title = "Kodama"
 page_template="page.html"
 
 [extra]
-title = ""
+title = "Ph.D. student at [CRIStAL](https://www.cristal.univ-lille.fr/spip.php?page=rubrique&id_rubrique=9)"
 
 interests = [
-  "Rainbow pony",
-  "Martian food",
-  "Quantic science"
+  "Bayesian inference",
+  "Inverse problems",
+  "(Distributed) Markov Chain Monte Carlo algorithms",
 ]
 
 [[extra.education.courses]]
-  course = "Latest degree"
-  institution = "Some academy"
-  year = 2020
+  course = "Ph.D. signal processing"
+  institution = "Centrale Lille, CRIStAL laboratory"
+  year = "2024-2027*"
 
 [[extra.education.courses]]
-  course = "Another degree"
-  institution = "Here and there"
-  year = 2016
+  course = "M.Sc. data science"
+  institution = "Centrale Lille, IMT Nord Europe, University of Lille"
+  year = "2022-2024"
 
 [[extra.education.courses]]
-  course = "First degree"
-  institution = "My academy"
-  year = 2015
+  course = "M.Eng. computer science"
+  institution = "IMT Nord Europe"
+  year = "2018-2024"
 
 [[extra.avatar_icons]]
   icon = "github"
   link = "https://github.com/adfaure"
 [[extra.avatar_icons]]
-  icon = "gitlab"
-  link = "https://gitlab.com/adfaure"
-[[extra.avatar_icons]]
   icon = "linkedin"
-  link = "https://www.linkedin.com/in/adrien-faure-9958978b/"
+  link = "https://www.linkedin.com/in/nicolas-goeman/?originalSubdomain=fr"
 +++
 
-Welcome with the kodama theme, inspired from hugo academic theme.
-
-This theme is build with tailwindcss, and uses no JavaScript. It is meant to be simple, yet pretty.
+I'm currently a first year Ph.D. student at the CRIStAL laboratory in the wonderful city of Lille (France) working on distributed Markov Chain Monte Carlo algorithms (MCMC), under the supervision of Pierre CHAINAIS and Pierre-Antoine THOUVENIN. My research focusses on developing new statistical tools to solve high dimensional inverse problems. This is of particular interest for applications such as astronomy where tremendous amount of data are available.
