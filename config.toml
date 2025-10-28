@@ -20,3 +20,8 @@ theme = "kodama-theme"
 favicon = "photo.jpg"
 author = "Nicolas Goeman"
 description = "Personal academic webpage"
+menu_items = [
+    { name = "Home", url = "/" },
+    { name = "Blog", url = "/blog/" },
+    { name = "About", url = "/about/" }
+]
