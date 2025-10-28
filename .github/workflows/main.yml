@@ -1,18 +1,31 @@
-# .github/workflows/main.yml
-on: push
-name: Build and deploy GH Pages
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
-      - name: Fix Git safe directory
-        run: git config --global --add safe.directory /github/workspace
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: Disable Jekyll
-        run: touch public/.nojekyll
-      - name: build-and-deploy
-        uses: ./ # wherever your action is in relation to the root of the repo
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive  # make sure Kodama theme is cloned
+
+      - name: Install Zola
+        run: |
+          curl -sSLf https://sh.rustup.rs | sh -s -- -y
+          source $HOME/.cargo/env
+          cargo install zola
+
+      - name: Build site
+        run: zola build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
