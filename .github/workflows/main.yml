@@ -10,6 +10,8 @@ jobs:
         run: git config --global --add safe.directory /github/workspace
       - name: checkout
         uses: actions/checkout@v2
+      - name: Disable Jekyll
+        run: touch public/.nojekyll
       - name: build-and-deploy
         uses: ./ # wherever your action is in relation to the root of the repo
         env:
