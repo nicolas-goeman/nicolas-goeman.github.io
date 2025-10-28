@@ -9,19 +9,63 @@ build_search_index = false
 
 theme = "kodama-theme"
 
+[translations]
+Biography = "Biography"
+Interests = "Interests"
+Education = "Education"
+toc = "Table of Contents"
+Published = "Published"
+Abstract = "Abstract"
+volume = "volume"
+number = "number"
+pages = "pages"
+
+# Various slugification strategies, see below for details
+# Defaults to everything being a slug
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-# highlight_code = false
-# highlight_theme = "kodama-theme"
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
 
 [extra]
-# Put all your custom variables here
-favicon = "photo.jpg"
-avatar = "photo.jpg"
-email = "nicolas.goeman[at]centralelille.fr"
-author = "Nicolas Goeman"
-description = "Personal academic webpage"
+version = "1.0.1"
+
+avatar = "static/photo.jpg"
+favicon = "static/photo.jpg"
+
+# Enter your email
+email = "kodama[at]domain.com"
+
+contact_in_index = true
+
+# Additional menu items
+# `Name` is what it is displayed, `path` is the url
 menu_items = [
-  { path = "#contacts", name = "Contact" },
+   { path = "#contacts", name = "Contact" },
 ]
+
+# Translation related extra
+language_codes = [ "en", "fr" ]
+
+[extra.fr]
+contact_in_index = false
+menu_items = [
+  # { path = "#contacts_fr", name = "Contact" },
+]
+
+# Your translations
+[languages.fr]
+title = "Kodama"
+
+[languages.fr.translations]
+Biography = "Bio"
+Interests = "Interêts"
+Education = "Formation"
+Published = "Publication"
+Abstract = "Résumé"
